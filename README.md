@@ -1,6 +1,6 @@
 # THN_scraper
 
-> A simple python script that goes to all four category pages in thehackernews.com and grabs all the latest articles and will print the stories title and links to the terminal
+> A simple python script that goes to all four category pages in thehackernews.com and grabs all the latest articles and will print the article's title and links to the terminal
 
 ---
 
@@ -22,4 +22,4 @@
 
 `$ python3 main.py`
 
-![THN_scraper screenshot][screenshot.png]
+![THN_scraper screenshot](screenshot.png)
