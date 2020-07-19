@@ -9,15 +9,23 @@ class CategoryScrape():
 
     catUrl = ''
 
+    r = ''
+
     def __init__(self, catUrl):
 
         print("Starting script")
 
         self.catUrl = catUrl
 
-        r = session.get(self.catUrl)
+        self.r = session.get(self.catUrl)
 
-        print(r.text)
+    def scrapeArticle(self):
+
+        blog_posts = self.r.html.find('.body-post')
+
+        #print(blog_posts)
 
 
 dataBreach = CategoryScrape(f'{baseURL}data%20breach')
+
+dataBreach.scrapeArticle()
