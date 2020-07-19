@@ -4,18 +4,24 @@ session = HTMLSession()
 
 baseURL = 'https://thehackernews.com/search/label/'
 
+data = {}
+
 
 class CategoryScrape():
 
     catUrl = ''
 
+    catName = ''
+
     r = ''
 
-    def __init__(self, catUrl):
+    def __init__(self, catUrl, catName):
 
         print("Starting script")
 
         self.catUrl = catUrl
+
+        self.catName = catName
 
         self.r = session.get(self.catUrl)
 
@@ -25,7 +31,19 @@ class CategoryScrape():
 
         #print(blog_posts)
 
+        data[f'{self.catName}'] = {}
 
-dataBreach = CategoryScrape(f'{baseURL}data%20breach')
+        for blog in blog_posts:
+
+            storyLink = blog.find('.story-link', first=True).attrs['href']
+
+            storyTitle = blog.find('.home-title', first=True).text
+
+            data[f'{self.catName}'][f'{storyTitle}'] = f'{storyLink}'
+
+        print(data)
+
+
+dataBreach = CategoryScrape(f'{baseURL}data%20breach', 'dataBreach')
 
 dataBreach.scrapeArticle()
