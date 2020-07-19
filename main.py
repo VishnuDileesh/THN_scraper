@@ -9,17 +9,19 @@ categories = ['data%20breach', 'Cyber%20Attack', 'Vulnerability', 'Malware']
 
 class CategoryScrape():
 
-    catUrl = ''
+    catURL = ''
 
     r = ''
 
-    def __init__(self, catUrl):
+    def __init__(self, catURL, category):
 
-        print("Starting script")
+        print(f'Scraping starting on Category : {category} \n')
 
-        self.catUrl = catUrl
+        print(' ')
 
-        self.r = session.get(self.catUrl)
+        self.catURL = catURL
+
+        self.r = session.get(self.catURL)
 
     def scrapeArticle(self):
 
@@ -39,6 +41,6 @@ class CategoryScrape():
 
 for category in categories:
 
-    category = CategoryScrape(f'{baseURL}{category}')
+    category = CategoryScrape(f'{baseURL}{category}', category)
 
     category.scrapeArticle()
