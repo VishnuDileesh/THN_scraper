@@ -1,8 +1,10 @@
-# THN_scraper_api
+# THN_scraper_json
 
 > A simple python script that goes to all four category pages in thehackernews.com and grabs all the latest articles and will save the title and story link to a json file
 
 ---
+
+> Checkout this repo to see how the scrapeed data could be served in using a web api framework like FastAPI https://github.com/VishnuDileesh/THN_scraper_api
 
 ## Usage
 
