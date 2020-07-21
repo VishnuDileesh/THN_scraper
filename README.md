@@ -1,4 +1,4 @@
-# THN_scraper
+# THN_scraper_api
 
 > A simple python script that goes to all four category pages in thehackernews.com and grabs all the latest articles and will save the title and story link to a json file
 
@@ -22,4 +22,4 @@
 
 `$ python3 main.py`
 
-![THN_scraper screenshot](screenshot.png)
+![THN_scraper_api screenshot](json-screenshot.png)
