@@ -4,6 +4,8 @@
 
 ---
 
+> Checkout this repo to see how the scrapeed data could be served in using a web api framework like FastAPI https://github.com/VishnuDileesh/THN_scraper_api
+
 ## Usage
 
 > Clone the repo
